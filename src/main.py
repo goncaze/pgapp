@@ -17,7 +17,9 @@ def main(page: ft.Page):
     cursor.execute("SELECT * FROM evento")
     rows = cursor.fetchall()
 
+    coluna = ft.Column()
     for record in rows:
+        coluna.controls.append(ft.Text(value=record))
         print(record)
 
     counter = ft.Text("0", size=50, data=0)
@@ -32,10 +34,7 @@ def main(page: ft.Page):
     )
     page.add(
         ft.SafeArea(
-            ft.Container(
-                counter,
-                alignment=ft.alignment.center,
-            ),
+            content=coluna,
             expand=True,
         )
     )
