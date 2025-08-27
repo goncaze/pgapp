@@ -6,11 +6,11 @@ def main(page: ft.Page):
 
     # Mesma funcionalidade, sem dependências C
     conn = pg8000.connect(
-        host="localhost",
-        port=5432,
-        database="calendario_db",
-        user="postgres",
-        password="root10",
+        host="aws-1-sa-east-1.pooler.supabase.com",
+        port=6543,
+        database="postgres",
+        user="postgres.yneqljutudrbiacihmxw",
+        password="ORHAz33BTMcSJE27",
     )
 
     cursor = conn.cursor()
